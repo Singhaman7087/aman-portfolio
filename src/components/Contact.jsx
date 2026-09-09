@@ -17,7 +17,9 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    alert(`Thank you ${formData.name}! Your message has been submitted.`);
+    alert(
+      `Thank you ${formData.name}! Your message has been submitted.`
+    );
 
     setFormData({
       name: "",

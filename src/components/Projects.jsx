@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const projects = [
   {
     title: "Portfolio Website",
@@ -11,7 +13,7 @@ const projects = [
   {
     title: "Weather App",
     description:
-      "A weather application that displays real-time weather information.",
+      "A weather application that displays weather information.",
     image: "/projects/weather.jpg",
     technologies: ["JavaScript", "API", "CSS"],
     github: "https://github.com/",
@@ -41,16 +43,23 @@ function Projects() {
       </p>
 
       <div className="projects-container">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <motion.div
-  className="project-card"
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6 }}
->
+            className="project-card"
+            key={project.title}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.15,
+            }}
+          >
             <div className="project-image">
-              <img src={project.image} alt={project.title} />
+              <img
+                src={project.image}
+                alt={project.title}
+              />
             </div>
 
             <div className="project-content">
@@ -78,8 +87,6 @@ function Projects() {
 
                 <a
                   href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
                   className="project-btn live"
                 >
                   Live Demo

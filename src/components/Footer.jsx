@@ -8,12 +8,14 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div>
+
+        <div className="footer-about">
           <h2>Aman.</h2>
 
           <p>
             Frontend Developer passionate about creating
-            modern and responsive web experiences.
+            modern, responsive and user-friendly web
+            experiences.
           </p>
         </div>
 
@@ -45,12 +47,11 @@ function Footer() {
             <FaInstagram />
           </a>
         </div>
+
       </div>
 
       <div className="footer-bottom">
-        <p>
-          © 2026 Aman Singh. All Rights Reserved.
-        </p>
+        <p>© 2026 Aman Singh. All Rights Reserved.</p>
 
         <a href="#home">Back to Top ↑</a>
       </div>

@@ -4,7 +4,6 @@ import profileImage from "../assets/profile.jpg";
 function Hero() {
   return (
     <section id="home" className="hero">
-
       <motion.div
         className="hero-content"
         initial={{ opacity: 0, x: -80 }}
@@ -53,7 +52,6 @@ function Hero() {
           className="profile-image"
         />
       </motion.div>
-
     </section>
   );
 }
